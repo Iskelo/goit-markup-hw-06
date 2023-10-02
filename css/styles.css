@@ -285,34 +285,99 @@ a {
 	border: 1px solid rgba(0, 0, 0, 0.10);
 }
 
-.modal-form {	
+/*
+	|=============================
+	|  MODAL FORM
+	|=============================
+*/
+.modal-form {
+	text-align: left;
+	padding-left: 40px;
+	padding-right: 40px;
 }
 .modal-title {
+	text-align: center;
+	margin: 40px auto 0 auto;
 	color: var(--title-color);
+	font-size: 20px;
 }
-.inputs{
-	margin: 0 auto;
-	width: 448px;
+.user-name, .user-tel, .user-email {
+	display: block;
+	width: 100%;
+	margin:0 auto;
+	height: 40px;
+	padding-left: 42px;
+	border-radius: 4px;
+	border: 1px solid var(--icons);
+}
+.form-label {
+	margin-top: 12px;
 	display: flex;
 	flex-direction: column;
+	position: relative;
 }
-.inputs label{
-	display: flex;
-	align-items: flex-start;
+.label-name, .label-email,.label-tel, .label-comment{
+	font-size: 12px;
+	margin-bottom: 4px;
+}
+.form-label input{
+
 }
 
-.form-btn{
-	margin: 0 auto;
-	width: 200px;
+.form-label .user-comment{
+	border-radius: 4px;
+	border: 1px solid var(--icons);
+	margin-bottom: 20px;
 }
-.agreement{
-	margin-left: 8px ;
-	color: var(--subtitle-color);
-	font-size: 14px;
+.label-name {	
+	left: 0;
+}
+.label-tel {
+}
+.label-email {
+}
+.form-icon{
+	position: absolute;
+	bottom: 11px;
+	left: 12px;
+}
+.label-comment {
+}
+.checkbox{
+	display: flex;
+	align-items: center;
+	padding-left: 10px;	
+	gap: 8px;
+}
+.agreement {
+	font-size: 14px;	
 }
 .agreement a{
-	text-decoration-line: underline;
+	text-decoration: underline;
 	color: var(--active-color);
+}
+
+.checkbox .user-checkbox{
+	width: 15px;
+	height: 15px;
+	
+}
+.form-btn {
+}
+
+/* .user-name:hover, .user-name:focus {	
+	outline: transparent;
+	border: 1px solid var(--active-color);	
+} */
+
+.form-label:hover .form-icon, .form-label:focus .form-icon{
+	fill: var(--active-color);
+}
+
+ .user-name:focus, .user-tel:focus, .user-email:focus, .user-comment:focus,
+ .user-name:hover, .user-tel:hover, .user-email:hover, .user-comment:hover{
+	outline: transparent;
+	border: 1px solid var(--active-color);
 }
 /* 
 	|=============================

@@ -70,16 +70,32 @@
 						<div class="modal-form">
 							<h2 class="modal-title">Залиште свої дані, ми вам передзвонимо</h2>
 							<form class="inputs" name="inputs" >
-								<label for="user-name">Ім'я
-								<input type="text" name="user-name" id="user-name"></label>
-								<label for="user-tel">Телефон</label>
-								<input type="tel" name="user-tel" id="user-tel">								
-								<label for="user-email">Пошта</label>
-								<input type="email" name="user-email" id="user-email">
-								<label for="user-comment">Коментар</label>
-								<textarea name="user-comment" id="user-comment" placeholder="Введіть текст" cols="30" rows="10"></textarea>	
-								<label>
-									<input type="checkbox" name="user-checkbox" id="user-checkbox">
+								<label class="form-label">
+									<span class="label-name">Ім'я</span>
+									<input class="user-name" type="text" name="user-name" id="user-name">
+									<svg class="form-icon" viewBox="0 0 100 100" width="18">
+										<use href="./images/icons/icons.svg#icon-person"></use>
+									</svg>
+								</label>
+								<label class="form-label">
+									<span class="label-tel">Телефон</span>
+									<input class="user-tel" type="tel" name="user-tel" id="user-tel">
+									<svg class="form-icon" viewBox="0 0 100 100" width="18">
+										<use href="./images/icons/icons.svg#icon-phone"></use>
+									</svg>
+								</label>
+								<label class="form-label">
+									<span class="label-email">Пошта</span>
+									<input class="user-email" type="email" name="user-email" id="user-email">
+									<svg class="form-icon" viewBox="0 0 100 100" width="18">
+										<use href="./images/icons/icons.svg#icon-email"></use>
+									</svg>
+								</label>
+								<label class="form-label">
+									<span class="label-comment">Коментар</span>
+									<textarea class="user-comment" name="user-comment" id="user-comment" placeholder="Введіть текст" cols="30" rows="10"></textarea>							
+								<label class="checkbox">
+									<input class="user-checkbox" type="checkbox" name="user-checkbox" id="user-checkbox">
 									<span class="agreement"> Погоджуюся з розсилкою та приймаю <a href="">Умови договору</a></span>
 								</label>
 								<button class="form-btn" type="submit">Відправити</button>
