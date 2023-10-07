@@ -243,7 +243,7 @@ a {
 	width: 100%;
 	height: 100%;
 	background: rgba(0, 0, 0, 0.20);
-	transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+	transition: opacity var(--slow-anim), visibility var(--slow-anim);
 	z-index: 1;	
 }
 
@@ -263,7 +263,7 @@ a {
 	border-radius: 4px;
 	box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);	
 	transform: translate( -50%, -50%) scale(1);
-	transition: transform .3s ease-in-out .2s;
+	transition: transform var(--slow-anim);
 }
 
 .backdrop.is-hidden .modal-wrapper{
@@ -284,7 +284,7 @@ a {
 	background-color: #fff;
 	border-radius: 50%;
 	border: 1px solid rgba(0, 0, 0, 0.10);
-	transition: fill .3s ease-in-out;
+	transition: fill var(--slow-anim);
 }
 .modal-btn:hover{
 	fill: var(--active-color);
@@ -330,6 +330,7 @@ a {
 	border-radius: 4px;
 	border: 1px solid var(--icons);
 	margin-bottom: 20px;
+	height: 120px;
 }
 .label-name {	
 	left: 0;
@@ -340,7 +341,7 @@ a {
 	bottom: 11px;
 	left: 12px;
 	fill: var(--title-color);
-	transition: fill .3s ease-in-out;
+	transition: fill var(--slow-anim);
 }
 
 .checkbox{
@@ -367,7 +368,7 @@ a {
 	margin: -1px;
 	border: 0;
 	padding: 0;
-	
+
 	white-space: nowrap;
 	clip-path: inset(100%);
 	clip: rect(0 0 0 0);
@@ -383,13 +384,13 @@ a {
 	outline: 2px solid var(--title-color);
 	outline-offset: -2px;
 	border-radius: 2px;
-	transition: background-color .3s ease-in-out, outline .3s ease-in-out;
+	transition: background-color var(--slow-anim), outline var(--slow-anim);
 }
 
 .custom-chackbox-icon {
 	fill: #fff;
 	opacity: 0;
-	transition: opacity .3s ease-in-out;
+	transition: opacity var(--slow-anim);
 }
 
 .user-checkbox:checked + .custom-chackbox{
@@ -413,7 +414,7 @@ a {
 	border-radius: 4px;
 	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 	margin-bottom: 40px;
-	transition: background-color .3s ease-in-out;
+	transition: background-color var(--slow-anim);
 }
 
 .form-btn:hover{
@@ -425,11 +426,11 @@ input[name^="user"]:hover, .user-comment:hover,.user-comment:focus, input[name^=
 	outline: transparent;
 }
 input[name^="user"]{
-	transition: border .3s ease-in-out;
+	transition: border var(--slow-anim);
 }
 
 .user-comment{
-	transition: border .3s ease-in-out;
+	transition: border var(--slow-anim);
 }
 
 input[name^="user"]:hover~.form-icon, input[name^="user"]:focus~.form-icon{
@@ -744,6 +745,68 @@ address ul li a:focus {
 .footer-icon:focus{
 	background-color: var(--active-color);
 }
+
+.footer-form{
+	width: 100%;
+}
+
+.footer-form form{
+	display: flex;
+	align-items: flex-end;
+	gap: 12px;
+	justify-content: flex-end;	
+}
+.footer-form-label {
+	display: flex;
+	flex-direction: column;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: 700;		
+}
+.footer-form-label input{
+	outline: transparent;
+	width: 358px;
+	margin-top: 20px;
+	background-color: transparent;
+	border: 1px solid var(--icons);
+	padding-left: 16px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border-radius: 4px;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+	color: var(--icons);
+	transition: border var(--slow-anim);
+}
+
+.footer-form-label:hover input, .footer-form-label input:focus{
+	border: 1px solid var(--active-color);
+	outline: transparent;
+}
+
+.footer-form-btn {
+	height: auto;
+	background-color: var(--active-color);
+	cursor: pointer;
+	color: #fff;
+	padding: 10px 28px;
+	font-weight: 700;	
+	border: none;
+	border-radius: 4px;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	transition: background-color var(--slow-anim);
+}
+
+.footer-form-btn:hover{
+	background-color: var(--active-btn);
+}
+
+.footer-form-icon {
+	fill: #fff;
+}
+
 
 /* 
 	|=============================
