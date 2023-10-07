@@ -9,6 +9,7 @@
 	--items: 1;
 	--slow-anim: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	--border-color: #eee;
+	--active-btn: #188CE8;
 }
 
 * {
@@ -257,7 +258,7 @@ a {
 	top: 50%;
 	left: 50%;	
 	width: 528px;
-	height: 581px;
+	height: auto;
 	background-color: #fff;
 	border-radius: 4px;
 	box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);	
@@ -283,6 +284,10 @@ a {
 	background-color: #fff;
 	border-radius: 50%;
 	border: 1px solid rgba(0, 0, 0, 0.10);
+	transition: fill .3s ease-in-out;
+}
+.modal-btn:hover{
+	fill: var(--active-color);
 }
 
 /*
@@ -320,9 +325,7 @@ a {
 	font-size: 12px;
 	margin-bottom: 4px;
 }
-.form-label input{
 
-}
 
 .form-label .user-comment{
 	border-radius: 4px;
@@ -340,6 +343,7 @@ a {
 	position: absolute;
 	bottom: 11px;
 	left: 12px;
+	fill: var(--title-color);
 }
 .label-comment {
 }
@@ -348,6 +352,7 @@ a {
 	align-items: center;
 	padding-left: 10px;	
 	gap: 8px;
+	margin-bottom: 30px;
 }
 .agreement {
 	font-size: 14px;	
@@ -363,22 +368,43 @@ a {
 	
 }
 .form-btn {
+	cursor: pointer;
+	color: #fff;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px 52px;
+	font-weight: 700;
+	/* width: 200px; */
+	/* height: 50px; */
+	background-color: var(--active-color);
+	border: none;
+	border-radius: 4px;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+	margin-bottom: 40px;
+	transition: background-color .3s ease-in-out;
 }
 
-/* .user-name:hover, .user-name:focus {	
-	outline: transparent;
-	border: 1px solid var(--active-color);	
-} */
+.form-btn:hover{
+	background-color: var(--active-btn);
+}
 
-.form-label:hover .form-icon, .form-label:focus .form-icon{
+
+input[name^="user"]:hover, .user-comment:hover,.user-comment:focus, input[name^="user"]:focus{
+	border: 1px solid var(--active-color);
+	outline: transparent;
+}
+input[name^="user"]:hover~.form-icon, input[name^="user"]:focus~.form-icon{
 	fill: var(--active-color);
 }
-
- .user-name:focus, .user-tel:focus, .user-email:focus, .user-comment:focus,
- .user-name:hover, .user-tel:hover, .user-email:hover, .user-comment:hover{
-	outline: transparent;
-	border: 1px solid var(--active-color);
+.user-comment{
+	padding-top: 12px;
+	padding-left: 16px;
 }
+.user-comment::placeholder{
+	color: rgba(117, 117, 117, 0.50);
+
+}
+
 /* 
 	|=============================
 	| FEATURES
