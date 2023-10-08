@@ -255,6 +255,7 @@ a {
 
 .modal-wrapper {
 	position: absolute;
+	padding: 40px;
 	top: 50%;
 	left: 50%;	
 	width: 528px;
@@ -284,28 +285,34 @@ a {
 	background-color: #fff;
 	border-radius: 50%;
 	border: 1px solid rgba(0, 0, 0, 0.10);
-	transition: fill var(--slow-anim);
+	transition: fill var(--slow-anim), outline fill var(--slow-anim);
 }
+
 .modal-btn:hover{
 	fill: var(--active-color);
 }
 
+.modal-btn:focus{
+	outline: 2px solid var(--active-color);
+	fill: var(--active-color);
+}
 /*
 	|=============================
 	|  MODAL FORM
 	|=============================
 */
-.modal-form {
+
+.inputs{
 	text-align: left;
-	padding-left: 40px;
-	padding-right: 40px;
 }
+
 .modal-title {
 	text-align: center;
-	margin: 40px auto 0 auto;
+	margin: 0 auto;
 	color: var(--title-color);
 	font-size: 20px;
 }
+
 .user-name, .user-tel, .user-email {
 	display: block;
 	width: 100%;
@@ -315,12 +322,14 @@ a {
 	border-radius: 4px;
 	border: 1px solid var(--icons);
 }
+
 .form-label {
 	margin-top: 12px;
 	display: flex;
 	flex-direction: column;
 	position: relative;
 }
+
 .label-name, .label-email,.label-tel, .label-comment{
 	font-size: 12px;
 	margin-bottom: 4px;
@@ -353,7 +362,8 @@ a {
 }
 
 .agreement {
-	font-size: 14px;	
+	font-size: 14px;
+	line-height: 1.344;	
 }
 
 .agreement a{
@@ -402,7 +412,13 @@ a {
 	opacity: 1;
 }
 
+.user-checkbox:hover + .custom-chackbox, .user-checkbox:focus + .custom-chackbox{
+	outline: 2px solid var(--active-color);
+}
+
+
 .form-btn {
+	display: flex;
 	cursor: pointer;
 	color: #fff;
 	margin-left: auto;
@@ -413,8 +429,10 @@ a {
 	border: none;
 	border-radius: 4px;
 	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-	margin-bottom: 40px;
+	
 	transition: background-color var(--slow-anim);
+	line-height: 1.875;
+	letter-spacing: 0.0597em;
 }
 
 .form-btn:hover{
