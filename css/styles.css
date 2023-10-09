@@ -285,7 +285,7 @@ a {
 	background-color: #fff;
 	border-radius: 50%;
 	border: 1px solid rgba(0, 0, 0, 0.10);
-	transition: fill var(--slow-anim), outline fill var(--slow-anim);
+	transition: fill var(--slow-anim), outline var(--slow-anim);
 }
 
 .modal-btn:hover{
@@ -311,6 +311,7 @@ a {
 	margin: 0 auto;
 	color: var(--title-color);
 	font-size: 20px;
+	letter-spacing: 0.6px;
 }
 
 .user-name, .user-tel, .user-email {
@@ -333,6 +334,7 @@ a {
 .label-name, .label-email,.label-tel, .label-comment{
 	font-size: 12px;
 	margin-bottom: 4px;
+	letter-spacing: .12px;
 }
 
 .form-label .user-comment{
@@ -363,7 +365,8 @@ a {
 
 .agreement {
 	font-size: 14px;
-	line-height: 1.344;	
+	line-height: 1.344;
+	letter-spacing: 0.42px;	
 }
 
 .agreement a{
@@ -447,9 +450,6 @@ input[name^="user"]{
 	transition: border var(--slow-anim);
 }
 
-.user-comment{
-	transition: border var(--slow-anim);
-}
 
 input[name^="user"]:hover~.form-icon, input[name^="user"]:focus~.form-icon{
 	fill: var(--active-color);
@@ -458,10 +458,13 @@ input[name^="user"]:hover~.form-icon, input[name^="user"]:focus~.form-icon{
 .user-comment{
 	padding-top: 12px;
 	padding-left: 16px;
+	transition: border var(--slow-anim);
 }
 
 .user-comment::placeholder{
 	color: rgba(117, 117, 117, 0.50);
+	font-size: 12px;
+	letter-spacing: 0.12px;
 }
 
 /* 
